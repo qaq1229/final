@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!--英文字體-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>映像販賣所 | 品牌理念</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/h.css">    
+</head>
+<body>
+    <!-- 導覽列 -->
+    <header>
+        <nav>
+            <ul class="nav_center">
+                <li><a href="info.html">品牌理念</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="index.html"><img class="logo" src="img/logo.png"></a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="shop.html">商品瀏覽</a>
+                        <div class="dropdown-content">
+                            <a href="shop.html">底片相機</a>
+                            <a href="shop.html">拍立得</a>
+                            <a href="shop.html">即可拍</a>
+                            <a href="shop.html">底片</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="member.html" class="nav_member">會員資訊</a></li>
+
+                <!-- 登入註冊 -->
+                <div class="nav_right">
+                    <button onclick="document.getElementById('id01').style.display='block'"><img class="sign_logo" src="img/sign.png" ></button>            
+                    <div id="id01" class="modal">
+                        <div class="container" id="container">
+                            <div class="form-container sign-up-container">
+                                <form action="#">
+                                    <h1>創立帳戶</h1>
+                                    <input type="text" placeholder="Account" />
+                                    <input type="email" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>註冊</button>
+                                </form>
+                            </div>
+                            <div class="form-container sign-in-container">
+                                <form action="#">
+                                    <h1>登入</h1>
+                                    <input type="email" placeholder="Account" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>登入</button>
+                                </form>
+                            </div>
+                            <div class="overlay-container">
+                                <div class="overlay">
+                                    <div class="overlay-panel overlay-left">
+                                        <h1>已註冊過</h1>
+                                        <p>點擊以登入</p>
+                                        <button class="ghost" id="signIn">登入</button>
+                                    </div>
+                                    <div class="overlay-panel overlay-right">
+                                        <h1>尚未註冊</h1>
+                                        <p>創建新帳戶</p>
+                                        <button class="ghost" id="signUp">註冊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 購物車 -->
+                    <div id="cart">
+                        <button class="openbtn" onclick="openNav()"><img class="cart_logo" src="img/cart.png" ></button>
+                    </div>
+                    <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="sidebarinner">
+                            <form action="">
+                                <div class="cart-p">
+                                    <img src="img/c1.png">
+                                    <div>
+                                        <div class="cp1">   <!--商品名稱-->
+                                            <h1>CANON</h1>
+                                            <p>New Canonet 28</p>
+                                        </div>
+                                        <div class="cp2">   <!-- 數量增減 -->
+                                            <input id="min" type="button" value="&minus;"/>
+                                            <input id="quantity" type="text" value="1"/>
+                                            <input id="add" type="button" value="+"/> <!-- ' &minus; '是減號 -->
+                                        </div>
+                                    </div>
+                                    <div class="cp3">   <!-- 商品價格 -->
+                                        <p>$5580</p>
+                                    </div>
+                                    <button>&times;</button>    <!-- 刪除商品按鈕 '&times;'是叉叉符號 -->
+                                </div>
+                                <div class="cart-p">
+                                    <img src="img/f2.png">
+                                    <div>
+                                        <div class="cp1">   <!--商品名稱-->
+                                            <h1>KODAK</h1>
+                                            <p>Tri-X 400</p>
+                                        </div>
+                                        <div class="cp2">   <!-- 數量增減 -->
+                                            <input id="min" type="button" value="&minus;"/>
+                                            <input id="quantity" type="text" value="1"/>
+                                            <input id="add" type="button" value="+"/> <!-- ' &minus; '是減號 -->
+                                        </div>
+                                    </div>
+                                    <div class="cp3">   <!-- 商品價格 -->
+                                        <p>$340</p>
+                                    </div>
+                                    <button>&times;</button>    <!-- 刪除商品按鈕 '&times;'是叉叉符號 -->
+                                </div>
+                                
+                                
+                                <!-- 計算總價 -->
+                                <div class="cart-total">
+                                    <p>SUBTOTAL<p>
+                                    <p class="r">$5920</p>
+                                </div>
+                                <div class="cart-but">
+                                    <input type="button" value="BACK TO SHOP" onclick="location.href='shop.html'">
+                                    <input type="button" value="CHECKOUT" class="p-check" onclick="location.href='checkout.html'">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <form action="/">
+                        <div class="search-box">
+                            <input type="text"  class="search-txt" placeholder="search..."/>
+                            <button type="submit" class="search-btn">
+                                <img src="img/search.png" >
+                                <!-- <i class="fa fa-search"></i> -->
+                            </button>
+                        </div> 
+                    </form>
+                </div>
+            </ul>
+        </nav>
+    </header>
+<!-- 導覽列結束 -->
+
+    <section class="s1">
+        <div class="info-1">
+            <img src="img/info-1.png" alt="">
+            <div class="info-t">
+                <h1>映像販賣所</h1>
+                <h2>／</h2>
+                <p>「映像」的原意是指透過光線的反射作用而顯現的物像，除了和相片的成像有微妙的關聯外，也與「印象」的讀音相近，而兩者除了擁有相似的聲調外，之間的意象也不謀而合。<br><br>
+                底片相機最大的特色在於你無法立即查看當下所拍攝的畫面，需要等待一段時間的累積，才能夠將一卷底片洗出。不同於現代的數位相機，我們希望能夠利用底片相機這種特別的方式記錄生活，
+                透過底片相機小小的觀景窗收藏眼前美好的光景。<br></p>
+            </div>
+        </div>
+        <div class="info-bg1"></div>
+    </section>
+    <!-- 相機定位 -->
+    <section class="s2">
+        <div class="info-2t">
+            <h1>底片相機<br>功能鍵</h1>
+            <p>*滑鼠移至色塊即可查看*</p>
+        </div>
+        <div class="info-2">
+            <img src="img/info-c.png" alt="">
+            <div class="f1 info"><p style="margin-top: -40px;">捲片桿</p></div>
+            <div class="f4 info"><p style="margin: -40px 0px 0px -5px;">快門按鈕</p></div>
+            <div class="f5 info"><p style="margin: -40px 0px 0px -10px;">快門速度盤</p></div>
+            <div class="f6 info"><p style="margin: -40px 0px 0px -5px;">閃光燈座</p></div>
+            <div class="f7 info"><p style="margin-top: -40px;">倒片扣</p></div>
+            <div class="f2 info"><p style="margin-top: 105px;">自拍器</p></div>
+            <div class="f3 info"><p style="margin: 165px 0px 0px -10px;">鏡頭拆卸鈕</p></div>
+        </div>
+        <div class="info-bg"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="foot">
+            <p>Copyright © 2021 CYIM All Rights</p>
+            <p>Tel:+886-3-265-9999 | Fax:+886-3-265-8888</p>
+        </div>
+    </footer>
+
+
+<!-- ========== JS語法 ========== -->
+<!-- 導覽列 -->
+<script src="js/h.js" charset="utf-8"></script>
+
+</body>
+</html>

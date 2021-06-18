@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/member.css">
+        <link rel="stylesheet" href="css/h.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!--英文字體-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>映像販賣所</title>
+   </head>
+<body>
+    <!-- 導覽列 -->
+    <header>
+        <nav>
+            <ul class="nav_center">
+                <li><a href="info.html">品牌理念</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="index.html"><img class="logo" src="img/logo.png"></a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="shop.html">商品瀏覽</a>
+                        <div class="dropdown-content">
+                            <a href="shop.html">底片相機</a>
+                            <a href="shop.html">拍立得</a>
+                            <a href="shop.html">即可拍</a>
+                            <a href="shop.html">底片</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="member.html" class="nav_member">會員資訊</a></li>
+
+                <!-- 登入註冊 -->
+                <div class="nav_right">
+                    <button onclick="document.getElementById('id01').style.display='block'"><img class="sign_logo" src="img/sign.png" ></button>            
+                    <div id="id01" class="modal">
+                        <div class="container" id="container">
+                            <div class="form-container sign-up-container">
+                                <form action="#">
+                                    <h1>創立帳戶</h1>
+                                    <input type="text" placeholder="Account" />
+                                    <input type="email" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>註冊</button>
+                                </form>
+                            </div>
+                            <div class="form-container sign-in-container">
+                                <form action="#">
+                                    <h1>登入</h1>
+                                    <input type="email" placeholder="Account" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>登入</button>
+                                </form>
+                            </div>
+                            <div class="overlay-container">
+                                <div class="overlay">
+                                    <div class="overlay-panel overlay-left">
+                                        <h1>已註冊過</h1>
+                                        <p>點擊以登入</p>
+                                        <button class="ghost" id="signIn">登入</button>
+                                    </div>
+                                    <div class="overlay-panel overlay-right">
+                                        <h1>尚未註冊</h1>
+                                        <p>創建新帳戶</p>
+                                        <button class="ghost" id="signUp">註冊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 購物車 -->
+                    <div id="cart">
+                        <button class="openbtn" onclick="openNav()"><img class="cart_logo" src="img/cart.png" ></button>
+                    </div>
+                    <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="sidebarinner">
+                            <form action="">
+                                <div class="cart-p">
+                                    <img src="img/c1.png">
+                                    <div>
+                                        <div class="cp1">   <!--商品名稱-->
+                                            <h1>CANON</h1>
+                                            <p>New Canonet 28</p>
+                                        </div>
+                                        <div class="cp2">   <!-- 數量增減 -->
+                                            <input id="min" type="button" value="&minus;"/>
+                                            <input id="quantity" type="text" value="1"/>
+                                            <input id="add" type="button" value="+"/> <!-- ' &minus; '是減號 -->
+                                        </div>
+                                    </div>
+                                    <div class="cp3">   <!-- 商品價格 -->
+                                        <p>$5580</p>
+                                    </div>
+                                    <button>&times;</button>    <!-- 刪除商品按鈕 '&times;'是叉叉符號 -->
+                                </div>
+                                <div class="cart-p">
+                                    <img src="img/f2.png">
+                                    <div>
+                                        <div class="cp1">   <!--商品名稱-->
+                                            <h1>KODAK</h1>
+                                            <p>Tri-X 400</p>
+                                        </div>
+                                        <div class="cp2">   <!-- 數量增減 -->
+                                            <input id="min" type="button" value="&minus;"/>
+                                            <input id="quantity" type="text" value="1"/>
+                                            <input id="add" type="button" value="+"/> <!-- ' &minus; '是減號 -->
+                                        </div>
+                                    </div>
+                                    <div class="cp3">   <!-- 商品價格 -->
+                                        <p>$340</p>
+                                    </div>
+                                    <button>&times;</button>    <!-- 刪除商品按鈕 '&times;'是叉叉符號 -->
+                                </div>
+                                
+                                
+                                <!-- 計算總價 -->
+                                <div class="cart-total">
+                                    <p>SUBTOTAL<p>
+                                    <p class="r">$5920</p>
+                                </div>
+                                <div class="cart-but">
+                                    <input type="button" value="BACK TO SHOP" onclick="location.href='shop.html'">
+                                    <input type="button" value="CHECKOUT" class="p-check" onclick="location.href='checkout.html'">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <form action="/">
+                        <div class="search-box">
+                            <input type="text"  class="search-txt" placeholder="search..."/>
+                            <button type="submit" class="search-btn">
+                                <img src="img/search.png" >
+                                <!-- <i class="fa fa-search"></i> -->
+                            </button>
+                        </div> 
+                    </form>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <script src="js/h.js" charset="utf-8"></script>
+<!-- 導覽列結束 -->
+
+    <section class="s1">
+        <div class="container2">
+            <div class="content">
+                <img src="img/ugly1.png" class="ugly1">
+                <img src="img/ugly2.png" class="ugly2">
+                <img src="" alt="">
+                <input type="radio" name="slider" checked id="modify">
+                <input type="radio" name="slider" id="record">
+            
+                <div class="list">
+                    <label for="modify" class="modify">
+                    <span class="title">個人資料</span>
+                    </label>
+                    <label for="record" class="record">
+                    <span class="title">訂單記錄</span>
+                    </label>
+                    <div class="slider"></div>
+                </div>
+                <div class="text-content">
+                    <div class="modify text">
+                        <div class="rr">
+                            <div class="info">
+                                <p>個人資料</p>
+                                <form action="">
+                                    <div class="mod-txt">
+                                        <input type="text" name="" id="" placeholder="Name" value="卡比獸">     <!--抓個人資料填入value內-->
+                                        <input type="text" name="" id="" placeholder="Gender" value="">
+                                        <input type="text" name="" id="" placeholder="Phone" value="">
+                                        <input type="text" name="" id="" placeholder="Email" value="abcabc@gmail.com">
+                                        <input type="text" name="" id="" placeholder="Address" value="">
+                                    </div>
+                                    <input type="submit" value="UPDATE" class="p-sub">
+                                </form>
+                            </div>
+                            <div class="acc">
+                                <p>帳號密碼</p>
+                                <form action="">
+                                    <div class="mod-txt">
+                                        <input type="text" name="" id="" placeholder="Account" value="abcabc">    <!--抓個人資料填入value內-->
+                                        <input type="text" name="" id="" placeholder="Password" value="**********">
+                                    </div>
+                                    <input type="submit" value="UPDATE" class="p-sub">
+                                </form>
+                                <h2>*如需修改資料請直接填入輸入格*</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="record text">
+                        <table class="r-table">
+                            <tr>
+                                <th>訂單編號</th>
+                                <th>訂單日期</th>
+                                <th>品名</th>
+                                <th>數量</th>
+                                <th>合計</th>
+                                <th>備註</th>
+                                <th>訂單狀態</th>
+                            </tr>
+                            <tr>
+                                <td>A20200526</td>
+                                <td>2021/05/26</td>	
+                                <td><span>CONON<br>New Canonet 28</span></td>   <!--br前是抓品牌 br後是抓品名-->
+                                <td>1</td>
+                                <td>$2000</td>
+                                <td>無</td>
+                                <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>A20200526</td>
+                                <td>2021/05/26</td>	
+                                <td><span>KODAK<br>Tri-X 400</span></td>
+                                <td>1</td>
+                                <td>$2000</td>
+                                <td>無</td>
+                                <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>A20200524</td>
+                                <td>2021/05/24</td>	
+                                <td><span>KONICA<br>Genba Kantoku 28WB</span></td>
+                                <td>1</td>
+                                <td>$2000</td>
+                                <td>無</td>
+                                <td>已完成</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="foot">
+            <p>Copyright © 2021 CYIM All Rights</p>
+            <p>Tel:+886-3-265-9999 | Fax:+886-3-265-8888</p>
+        </div>
+    </footer>
+
+</body>
+</html>

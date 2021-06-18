@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!--英文字體-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- header -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- header -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h-in.css">
+
+    <title>映像販賣所</title>
+
+</head>
+<body>
+    <!-- 導覽列 -->
+    <header>
+        <nav>
+            <ul class="nav_center">
+                <li><a href="info.html">品牌理念</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="index.html"><img class="logo" src="img/logo.png"></a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="shop.html">商品瀏覽</a>
+                        <div class="dropdown-content">
+                            <a href="shop.html">底片相機</a>
+                            <a href="shop.html">拍立得</a>
+                            <a href="shop.html">即可拍</a>
+                            <a href="shop.html">底片</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="member.html" class="nav_member">會員資訊</a></li>
+
+                <!-- 登入註冊 -->
+                <div class="nav_right">
+                    <button onclick="document.getElementById('id01').style.display='block'"><img class="sign_logo" src="img/sign.png" ></button>            
+                    <div id="id01" class="modal">
+                        <div class="container" id="container">
+                            <div class="form-container sign-up-container">
+                                <form action="#">
+                                    <h1>創立帳戶</h1>
+                                    <input type="text" placeholder="Account" />
+                                    <input type="email" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>註冊</button>
+                                </form>
+                            </div>
+                            <div class="form-container sign-in-container">
+                                <form action="#">
+                                    <h1>登入</h1>
+                                    <input type="email" placeholder="Account" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>登入</button>
+                                </form>
+                            </div>
+                            <div class="overlay-container">
+                                <div class="overlay">
+                                    <div class="overlay-panel overlay-left">
+                                        <h1>已註冊過</h1>
+                                        <p>點擊以登入</p>
+                                        <button class="ghost" id="signIn">登入</button>
+                                    </div>
+                                    <div class="overlay-panel overlay-right">
+                                        <h1>尚未註冊</h1>
+                                        <p>創建新帳戶</p>
+                                        <button class="ghost" id="signUp">註冊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 購物車 -->
+                    <div id="cart">
+                        <button class="openbtn" onclick="openNav()"><img class="cart_logo" src="img/cart.png" ></button>
+                    </div>
+                    <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="sidebarinner">
+                            <form action="">
+                                <div class="cart-p">
+                                    <img src="img/c1.png">
+                                    <div>
+                                        <div class="cp1">   <!--商品名稱-->
+                                            <h1>CANON</h1>
+                                            <p>New Canonet 28</p>
+                                        </div>
+                                        <div class="cp2">   <!-- 數量增減 -->
+                                            <input id="min" type="button" value="&minus;"/>
+                                            <input id="quantity" type="text" value="1"/>
+                                            <input id="add" type="button" value="+"/> <!-- ' &minus; '是減號 -->
+                                        </div>
+                                    </div>
+                                    <div class="cp3">   <!-- 商品價格 -->
+                                        <p>$5580</p>
+                                    </div>
+                                    <button>&times;</button>    <!-- 刪除商品按鈕 '&times;'是叉叉符號 -->
+                                </div>
+                                <div class="cart-p">
+                                    <img src="img/f2.png">
+                                    <div>
+                                        <div class="cp1">   <!--商品名稱-->
+                                            <h1>KODAK</h1>
+                                            <p>Tri-X 400</p>
+                                        </div>
+                                        <div class="cp2">   <!-- 數量增減 -->
+                                            <input id="min" type="button" value="&minus;"/>
+                                            <input id="quantity" type="text" value="1"/>
+                                            <input id="add" type="button" value="+"/> <!-- ' &minus; '是減號 -->
+                                        </div>
+                                    </div>
+                                    <div class="cp3">   <!-- 商品價格 -->
+                                        <p>$340</p>
+                                    </div>
+                                    <button>&times;</button>    <!-- 刪除商品按鈕 '&times;'是叉叉符號 -->
+                                </div>
+                                
+                                
+                                <!-- 計算總價 -->
+                                <div class="cart-total">
+                                    <p>SUBTOTAL<p>
+                                    <p class="r">$5920</p>
+                                </div>
+                                <div class="cart-but">
+                                    <input type="button" value="BACK TO SHOP" onclick="location.href='shop.html'">
+                                    <input type="button" value="CHECKOUT" class="p-check" onclick="location.href='checkout.html'">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <form action="/">
+                        <div class="search-box">
+                            <input type="text"  class="search-txt" placeholder="search..."/>
+                            <button type="submit" class="search-btn">
+                                <img src="img/search.png" >
+                                <!-- <i class="fa fa-search"></i> -->
+                            </button>
+                        </div> 
+                    </form>
+                </div>
+            </ul>
+        </nav>
+    </header>
+<!-- 導覽列結束 -->
+
+<!-- 首圖 -->
+    <section class="s1">
+        <div class="con1">
+            <img src="img/index-bg.png" id="b1" alt="">        <!-- 底圖 -->
+            <div id="btt1">
+              <img src="img/index-bt.png" id="bt1" alt="">      <!-- 英文跑馬燈 -->
+            </div>
+            <div id="c1">                                     <!-- 相機幻燈片 -->
+                <img class="mySlides" src="img/b-c1.png">
+                <img class="mySlides" src="img/b-c2.png">
+                <img class="mySlides" src="img/b-e1.png">
+            </div>
+            <img src="img/logo2.png" class="c-logo" alt="">
+            <div class="t1">
+                <h1>FILM<br>CAMERA SHOP</h1>
+                <h2>／</h2>
+                <p>ＭAKING MEMORIES <br>WITH YOU<br>IS MY FAVORITE THING TO DO.</p>
+            </div>
+            <div class="t2">
+                <p>320314 桃園市中壢區中北路200號 <br>Tel:+886-3-265-9999<br>Fax:+886-3-265-8888</p>
+            </div>
+            <div class="t3">
+                <img src="img/contact.png" alt="">
+                <a href="mailto:nununuag@gmail.com"><p>CONTACT</p></a>
+            </div>
+        </div>
+    </section>
+
+<!-- 文案 -->
+    <section class="s2" data-aos="fade-zoom-in" data-aos-delay="300">
+        <img src="img/logo-1.png" class="lo1" alt="">
+        <p>「<br>&emsp; 記憶裡，殘存著，<br>&emsp; 觀景窗裡交織的光影。
+            <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;」</p>
+            <img src="img/t-bg.jpg" alt="" class="tb-right">
+            <img src="img/t-bg.jpg" alt="" class="tb-left">
+    </section>
+
+<!-- 熱門商品 -->
+    <section class="s3">
+        <div class="s3-1">
+            <div class="g1" data-aos="fade-right" onclick="location.href='introduce.html';">
+                <div class="bgc" style="background-color: #9ca2ac;"></div>
+                <img src="img/b-c1.png" class="g-c" alt="">
+                <img src="img/b-c1-2.png" class="g-hov" alt="">
+                <div class="bgt">
+                    <div class="g-new"><p>HOT</p></div>
+                    <div class="g-no">
+                        <p>NO.1</p>
+                    </div>
+                    <div class="g-name">
+                        <h1>CANON</h1>
+                        <h2>New Canonet 28</h2>
+                    </div>
+                    <div class="g-arrow">
+                        <p>INFO >></p>
+                    </div>
+                </div>
+            </div>
+            <div class="g2" data-aos="fade-left" onclick="location.href='introduce.html';">
+                <div class="bgc" style="background-color: #8a8c7a;"></div>
+                <img src="img/b-c2.png" class="g-c" alt="">
+                <img src="img/b-c2-2.png" class="g-hov" alt="">
+                <div class="bgt">
+                    <div class="g-no">
+                        <p>NO.2</p>
+                    </div>
+                    <div class="g-name">
+                        <h1>NIKON</h1>
+                        <h2>FM2</h2>
+                    </div>
+                    <div class="g-arrow">
+                        <p>INFO >></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="s3-1">
+            <div class="g1" data-aos="fade-right" onclick="location.href='introduce.html';">
+                <div class="bgc" style="background-color: #bfa196;"></div>
+                <img src="img/b-e1.png" class="g-c" alt="">
+                <img src="img/b-e1-2.png" class="g-hov" alt="">
+                <div class="bgt">
+                    <div class="g-no">
+                        <p>NO.3</p>
+                    </div>
+                    <div class="g-name">
+                        <h1>POLAROID</h1>
+                        <h2>OonStep SX-70</h2>
+                    </div>
+                    <div class="g-arrow">
+                        <p>INFO >></p>
+                    </div>
+                </div>
+            </div>
+            <div class="g2" data-aos="fade-left" onclick="location.href='introduce.html';">
+                <div class="bgc" style="background-color: #d5cfc7;"></div>
+                <img src="img/b-c3.png" class="g-c" alt="">
+                <img src="img/b-c3-2.png" class="g-hov" alt="">
+                <div class="bgt">
+                    <div class="g-new"><p>NEW</p></div>
+                    <div class="g-no">
+                        <p>NO.4</p>
+                    </div>
+                    <div class="g-name">
+                        <h1>OLYMPUS</h1>
+                        <h2>TRIP 35</h2>
+                    </div>
+                    <div class="g-arrow">
+                        <p>INFO >></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="s3-1">
+            <div class="g1" data-aos="fade-right" onclick="location.href='introduce.html';">
+                <div class="bgc" style="background-color: #adafb0;"></div>
+                <img src="img/b-c6.png" class="g-c" alt="">
+                <img src="img/b-c6-2.png" class="g-hov" alt="">
+                <div class="bgt">
+                    <div class="g-no">
+                        <p>NO.5</p>
+                    </div>
+                    <div class="g-name">
+                        <h1>CANON</h1>
+                        <h2>QL-17</h2>
+                    </div>
+                    <div class="g-arrow">
+                        <p>INFO >></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="g2" data-aos="fade-left" onclick="location.href='introduce.html';">
+                <div class="bgc" style="background-color:#b3a793;"></div>
+                <img src="img/b-c4.png" class="g-c" alt="">
+                <img src="img/b-c4-2.png" class="g-hov" alt="">
+                <div class="bgt">
+                    <div class="g-no">
+                        <p>NO.6</p>
+                    </div>
+                    <div class="g-name">
+                        <h1>ARGUS</h1>
+                        <h2>C3 Brick</h2>
+                    </div>
+                    <div class="g-arrow">
+                        <p>INFO >></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="foot">
+            <p>Copyright © 2021 CYIM All Rights</p>
+            <p>Tel:+886-3-265-9999 | Fax:+886-3-265-8888</p>
+        </div>
+    </footer>
+
+
+
+<!-- ========== JS語法 ========== -->
+<!-- 導覽列 -->
+    <script src="js/h.js" charset="utf-8"></script>
+
+<!--滑動頁面-->
+    <script>
+        let b1 = document.getElementById('b1');
+        let btt1 = document.getElementById('btt1');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            b1.style.top = value *1 + 'px';
+            btt1.style.top = value *0.5 + 'px';
+        })
+    </script>
+<!--幻燈片-->
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+    </script>
+<!-- 滑動特效 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({duration:1000,once:true});
+    </script>
+</body>
+</html>
