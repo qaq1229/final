@@ -113,8 +113,7 @@
 	padding: 0px 15px;
 }
 
-.prod-t1:after {
-	/*下底線*/
+.prod-t1:after {          /*下底線*/
 	content: '';
 	width: 0%;
 	height: 18px;
@@ -380,4 +379,96 @@ td:hover p {
 .man-s .m-i:hover+.m-t {
 	transform: scale(1.1);
 	opacity: 1;
+}
+
+
+@media screen and (max-width: 450px) {
+	.ad{
+		padding-top: 20%;
+		
+	}
+	.ad .slideshow-container{
+		width: 100%;
+	}
+	.ad .prev,.ad .next {
+		/* display: none; */
+		padding: 8px;
+		font-size: 10px;
+	}
+	.s1{
+		padding: 50px 0px;
+	}
+	.prod-t1 {
+		margin-bottom: 30px;
+	}
+	.prod-t1 h1 {
+		font-size: 20px;
+		letter-spacing: 5px;
+		padding: 0px 10px;
+	}	
+	.prod-t1:after {
+		height: 12px;
+		background-color: rgb(187, 187, 187);
+		position: absolute;
+		top: 18px;
+		left: 0;
+		transition: all .3s linear;
+		z-index: -1;
+	}
+	.slider {
+		width: 85%;
+	}
+	.prod-cate li {
+		width: 80px;
+		height: 160px;
+	}
+	.prod-cate p {
+		font-size: 12px;
+		top: 70px;
+	}
+	.prod-cate table td {
+		height: 100px;
+	}
+	.prod-cate td {
+		width: 60px;
+	}
+	.prod-cate .blank {
+		width: 3px;
+	}
+	.prod-cate td img {
+		height: 85px;
+	}
+
+	.s2-2{
+		padding: 0px;
+	}
+	.prod {
+		width: 340px;
+		min-height: 100%;
+	}
+	.category {
+		width: 150px;
+		height: 200px;
+		margin: 10px;
+	}
+	.p-b{
+		width: 150px;
+		height: 150px;
+	}
+	.category img {
+		width: 130px;
+	}
+	.category h1{
+		font-size: 18px;
+		line-height: 20px;
+		margin-top: 8px;
+	}
+	.category p{
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.man-s{
+		display: none;
+	}
 }

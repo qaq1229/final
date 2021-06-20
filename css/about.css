@@ -211,3 +211,89 @@
 }
   
 
+@media screen and (max-width: 450px) {
+    .mem-t h1{
+        font-size: 22px;
+        padding: 0px 10px;
+    }
+    .mem-t:after { 
+        height: 12px;
+        top: 26px;
+    }
+    .team{
+        display: inline-block;
+        width: 100%;
+    }
+    .m-1{
+        height: 400px;
+    }
+    .c-pic{
+        width: 280px;
+        margin-top: 40px;
+    }
+    .c-pic2{
+        width: 280px;
+    }
+    .m-pic{
+        width: 230px;
+        margin-top: 70px;
+    }
+    .m-pic2{
+        width: 230px;
+    }
+    .m-n{
+        top: 150px;
+        width: 70px;
+    }
+    .m-n2{
+        top: -135px;
+        width: 70px;
+    }
+    .c-pic:hover+.m-pic{
+        margin-top: -130px;
+    }
+    .c-pic2:hover+.m-pic2{
+        margin-top: 160px;
+    }
+    .s2-1{
+        display: inline-block;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px 0px 0px;
+        margin-bottom: 80px;
+    }
+    .map-bg{
+        width: 350px;
+        height: 280px;
+        margin: 50px 0px 0px 3%;
+        background-color: rgb(66, 66, 66);
+    }
+    .map iframe{
+        width: 360px; 
+        height:300px; 
+        margin-left: 6%;
+    }
+    .m-cont{
+        width: 80%;
+        padding: 20px 0px;
+        margin:auto;
+    }
+    .m-cont h1{
+        font-size: 20px;
+    }
+    .m-cont p{
+        font-size: 14px;
+    }
+    .m-cont input{
+        font-size: 14px;
+    }
+    .m-cont textarea{
+        font-size: 14px;
+        height: 120px;
+    }
+    .m-cont button{
+        font-size: 12px;
+    }
+    
+}

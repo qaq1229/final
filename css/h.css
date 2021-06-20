@@ -550,7 +550,6 @@ a {
   font-family: 'Mukta', sans-serif;
   font-size: 16px;
   line-height: 20px;
-
 }
 
 
@@ -616,7 +615,7 @@ a {
   display: flex;
 }
 
-.cart-total input {
+/* .cart-total input {
   font-family: 'Mukta', sans-serif;
   font-size: 18px;
   color: #fff;
@@ -627,7 +626,7 @@ a {
   background-color: #777f8d;
   margin-top: 20px;
   transition: .3s;
-}
+} */
 
 .cart-total p {
   font-family: 'Mukta', sans-serif;
@@ -697,3 +696,136 @@ a {
   line-height: 24px;
   letter-spacing: 1px;
 }
+
+
+@media screen and (max-width: 450px) {
+  .logo{
+    width: 30px;
+  }
+  .nav_center li {
+    /* display: inline-block; */
+    padding: 4px;
+  }
+  nav,
+  ul,
+  li,
+  a {
+    font-size: 12px;
+    transform: scale(0.95)
+  }
+  .dropdown-content {
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    padding: 8px 5px;
+    font-size: 10px;
+  }
+  .sign_logo {
+    margin-right: 3px;
+    width: 18px;
+    height: 18px;
+  }
+  .cart_logo {
+    margin-right: 0px;
+    width: 18px;
+    height: 18px;
+  }
+  .nav_right {
+    position: absolute;
+    right: -20px;
+  }
+  .search-btn {
+    display: none;
+  }
+
+  .container {
+    width: 350px;
+    min-height: 250px;
+  }
+  .container h1 {
+    font-size: 14px;
+  }
+  
+  .container p {
+    font-size: 10px;
+    margin: 10px 0 10px;
+  }
+  
+  .container form {
+    padding: 0 15px;
+  }
+  .container input {
+    border-radius: 2px;
+    padding: 8px 10px;
+    margin: 4px 0;
+    width: 100%;
+    font-size: 10px;
+  }
+  .container button {
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  .sidebarinner img {
+    width: 105px;
+    margin: 0px 10px;
+  }
+  .cart-p {
+    margin-left: 35%;
+    margin-bottom: 30px;
+    width: 330px;
+    height: 110px;
+    padding: 5px 0px;
+  }
+  .cp1 {
+    width: 180px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .cp1 h1 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .cp1 p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .cp2 {
+    width: 95px;
+  }
+  .cp2 input {
+    font-size: 12px;
+    width: 20px;
+    height: 30px;
+  }
+  .cp3 p {
+    right: 25px;
+  }
+  .cart-total {
+    width: 320px;
+    margin: 50px 0px 0px 35%;
+  }
+  .cart-total p {
+    font-size: 14px;
+  }
+  .cart-but {
+    margin: 30px 0px 0px 35%;
+  }
+  .cart-but input {
+    font-size: 12px;
+    width: 160px;
+  }
+  .foot{
+    height: 80px;
+    padding: 20px;
+    text-align: center;
+  }
+  .foot p{
+    line-height: 20px;
+    transform: scale(0.80); /*讓字體縮小為 12*0.8 px*/
+  }
+}
+

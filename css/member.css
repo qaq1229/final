@@ -218,3 +218,83 @@
   position: fixed;
   bottom: 0;
 }
+
+
+@media screen and (max-width: 450px) {
+  .ugly1{
+    display: none;
+  }
+  .ugly2{
+    display: none;
+  }
+  .container2 {
+    height: 550px;
+    width: 380px;
+    margin-top: 18%;
+  }
+  .content .list {
+    margin: 20px 3%;
+  }
+  .content .list label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .content .slider {
+    height: 50%;
+    width: 100%;
+  }
+  #record:checked~.list .slider {
+    top: 40px;
+  }
+  .content .text-content {
+    width: 100%;
+  }
+  .rr {
+    display: inline-block;
+    top: 8%;
+    margin-left: 20px;
+  }
+  .rr .info{
+    margin-right: 0px;
+  }
+  .rr p {
+    font-size: 14px;
+    margin-left: 90px;
+  }
+  .mod-txt input{
+    width: 250px;
+    font-size: 12px;
+    margin: 10px 0px;
+  }
+  .p-sub {
+    font-size: 12px;
+    padding: 5px 26px;
+    margin: 20px 0px 30px 138px;
+  }
+  .acc h2{
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .r-table{
+    top: 10%;
+    width: 80%;
+  }
+  .r-table th{
+    font-size: 12px;
+  }
+  .r-table td{
+    /* border: 1px solid black; */
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 5px 0px;
+  }
+  .r-table td span{
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .dis{
+    display: none;
+  }
+}
